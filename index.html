@@ -305,22 +305,29 @@
         <input type="radio" name="variable11" value="2"> 2
         <input type="radio" name="variable11" value="2.5"> 2.5
         <input type="radio" name="variable11" value="3"> 3       
-		
+	 	<label for="variable12">Blower:</label>
+        <input type="radio" name="variable12" value="1/7" required> 1/7
+		<input type="radio" name="variable12" value="2/7" > 2/7
+		<input type="radio" name="variable12" value="3/7" > 3/7
+		<input type="radio" name="variable12" value="4/7" checked> 4/7
+		<input type="radio" name="variable12" value="5/7" > 5/7
+		<input type="radio" name="variable12" value="6/7" > 6/7		
+		<input type="radio" name="variable12" value="7/7" > 5/7		
 		
 	<!-- 	INPUT VARIABLES CAN BE ADDED /OR TITLE CHANGE  -->
 	
 	   
 		<label for="input1" onclick="editLabelValue(this)">Input 1 :</label>
 	<!-- 	<input type="text" id="input1text" required> -->
-        <input type="text" id="input1" required>
+        <input type="number" id="input1" required>
        
         <label for="input2" onclick="editLabelValue(this)">Input 2  :</label>
 	   <!--  <input type="text" id="input2text" required> -->
-        <input type="text" id="input2" required>
+        <input type="number" id="input2" required>
 		
 		<label for="input3" onclick="editLabelValue(this)"> Input 3 :</label>
 	<!-- 	<input type="text" id="input3text" required> -->
-        <input type="text" id="input3" required>
+        <input type="number" id="input3" required>
 		
      	<label for="input4">Commnets :</label>
         <input type="text" id="input4" required>
@@ -357,6 +364,7 @@
 		    <th>Left Foot</th>				
             <th>Right Foot</th>
 			<th>Overall</th>
+			<th>Blower</th>
             <th onclick="editCellValue(this)">Input 1</th>
             <th onclick="editCellValue(this)">Input 2</th>
             <th onclick="editCellValue(this)">Input 3</th>
@@ -381,7 +389,7 @@
             op=[document.getElementById("Min").value]
 		 
             // Get values from radio buttons for variables 1 to 10
-            for (var i = 0; i <= 11; i++) {
+            for (var i = 0; i <= 12; i++) {
                 var variableName = "variable" + i;
                 var selectedValue = document.querySelector('input[name="' + variableName + '"]:checked').value;
                 op.push(selectedValue)
@@ -508,7 +516,8 @@
 		   botonesOpcion[6].checked = true;	
            var botonesOpcion = document.querySelectorAll('input[name=variable11]');
 		   botonesOpcion[6].checked = true;			   
-
+             var botonesOpcion = document.querySelectorAll('input[name=variable12]');
+		   botonesOpcion[3].checked = true;
 		   
 		 //  for (var i = 1; i <= 10; i++) {
                // var variableName = "variable" + i;
